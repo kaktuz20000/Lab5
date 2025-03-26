@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
-                git changelog: false, url: 'http://gitlab.devops.ru/kaktuz2000/lab4.git'
+                git url: 'http://gitlab.devops.ru/kaktuz2000/lab4.git', credentialsId: '11382cacce21e44f67b4a0b4e5c3d490c4'
             }
         }
         stage('Prepare') {
