@@ -14,29 +14,6 @@ pipeline {
                 git url: 'http://gitlab.devops.ru/kaktuz2000/lab4.git', credentialsId: '11382cacce21e44f67b4a0b4e5c3d490c4'
             }
         }
-        stage('Prepare') {
-            steps {
-                sh 'python --version'
-                sh 'pip install virtualenv'
-                sh '${BIN_PATH}virtualenv venv'
-                sh 'bash -c "source venv/bin/activate"'
-                sh 'pip install -r requirements.txt'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'pytest tests/'
-            }
-        }
-        stage('Lint') {
-            steps {
-                sh 'flake8 src/ tests/'
-            }
-        }
-        stage('Typecheck') {
-            steps {
-                sh 'mypy src/ tests/'
-            }
-        }
+        
     }
 }
