@@ -1,7 +1,0 @@
-fastapi
-uvicorn
-httpx
-pytest
-pydantic
-pydantic-settings
-numpy
